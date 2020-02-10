@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+    if(!isset($_SESSION['userlogin'])){
+        header("Location: login.php");
+    }
+    
+?>
 
 <!DOCTYPE html>
 
@@ -27,17 +35,24 @@
 
 
         <!--Formulario de subida-->
-        <div class="container-lg d-flex justify-content-center shadow bg-white rounded">
-            
-            <form>
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword">
+        <div class="container-lg d-flex  shadow bg-white rounded" style="height: 100%">
+            <form method="post" id="datosDeSustancia">
+              <div class="form-group">
+                <label  >Nombre de la sustancia</label>
+                <input type="text" class="form-control" id="nombre">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">PDF</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="archivopdf" required>
+                    <label class="custom-file-label" for="archivopdf">Escojer archivo...</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
                 </div>
               </div>
-              
+                <button type="button" class="btn btn-primary" id="botonSubir">Subir</button>
+                <button type="button" class="btn btn-secondary" >Cancelar</button>
             </form>
+
         </div>
 
 
@@ -51,6 +66,6 @@
     <?php
     include 'footerNav.php';
     ?>
-
+    <script src="script.js"></script>
 </body>
 </html>

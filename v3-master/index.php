@@ -1,8 +1,10 @@
 <?php
+/*
 session_start();
-    if(!isset($_SESSION['userlogin'])){
+    if(isset($_SESSION['userlogin'])){
         header("Location: index.php");
     }
+    */
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,15 +27,6 @@ session_start();
             <?php
             include 'navbar.php';
             ?>
-
-
-            <!--BreadCrumbs
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                </ol>
-            </nav>
-            -->
             <!--Busqueda-->
             <div class = "text-center mt-5" style="width: 100%;">   
                 <form>
