@@ -35,19 +35,73 @@ session_start();
             <div class=" container-fluid border border-dark rounded" style="background: white;height: 98%;width: 92%">
                 <!--Busqueda y resultados -->
                 <form>
-                    <div class="form-group" style="margin-top: 20px">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Buscar de sustancias">
+                    <div class="form-group d-flex justify-content-center" style="margin-top: 20px;width: 40%">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Buscar sustancias">
                     </div> 
+                    <div>
+                        <h3 class="lead">
+                            Resultados de Busqueda
+                        </h3>
+                    </div>
+                    <div>
+                        <ul class="list-group list-group ">
+                            <li class="list-group-item ">
+                                <div id="root">
+                                    <p class="lead">nombreArchivo</p>
+                                </div>
+                                <a href="#" class="badge badge-info">Descargar</a>
+                                <a href="#" class="badge badge-warning">Editar</a>
+                                <a href="#" class="badge badge-danger">Eliminar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- esto es lo que se mostraria, es el plan hasta ahora.
+                    <div>
+                        <ul class="list-group list-group ">
+                            <li class="list-group-item ">Sustancia 1
+                                <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
+                                    <label class="btn btn-light btn-sm">
+                                        <input type="radio" name="options" id="option1" checked> Descargar PDF
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Sustancia 2
+                                <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
+                                    <label class="btn btn-light btn-sm">
+                                        <input type="radio" name="options" id="option1" checked> Descargar PDF
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Sustancia 3
+                                <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
+                                    <label class="btn btn-light btn-sm">
+                                        <input type="radio" name="options" id="option1" checked> Descargar PDF
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Sustancia 4
+                                <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
+                                    <label class="btn btn-light btn-sm">
+                                        <input type="radio" name="options" id="option1" checked> Descargar PDF
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Sustancia 5
+                                <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
+                                    <label class="btn btn-light btn-sm">
+                                        <input type="radio" name="options" id="option1" checked> Descargar PDF
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                -->
                 </form>
 
             </div>
 
             
         </div>   <!--Termina Contenido-->
-
-
-
-        
 
         <!--Pie de Pagina-->
         <?php
