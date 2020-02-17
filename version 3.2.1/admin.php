@@ -36,13 +36,15 @@ session_start();
                 <!--Busqueda y resultados -->
                 <form>
                     <div class="form-group d-flex justify-content-center" style="margin-top: 20px;width: 40%">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Buscar sustancias">
+                        <input type="text" class="form-control" id="search" placeholder="Buscar sustancias">
+                        <button type="submit" id="busqueda" class="btn btn-light">Buscar</button>
                     </div> 
                     <div>
                         <h3 class="lead">
                             Resultados de Busqueda
                         </h3>
                     </div>
+                    
                     <div>
                         <ul class="list-group list-group ">
                             <li class="list-group-item ">
@@ -97,7 +99,43 @@ session_start();
                     </div>
                 -->
                 </form>
+                <!--Algoritmo de busqueda por nombre en la BD-->
+                <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous">
+                </script>
+                <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                <script>
 
+                    $(function(){
+                        //this runs a function if login button is clicked
+                        $('#busqueda').click(function(e){
+
+                        var valid = this.form.checkValidity();
+
+                    if(valid){
+                        var search = $('#search').val();
+                    }
+                        e.preventDefault();
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'busqueda.php',
+                            //send the user and password to jslogin.php
+                            data:  {search:search},
+                            success: function(data){    //returns 1 if the login was correct.
+                                alert(data);
+                                if($.trim(data) === "1"){
+                                    alert('hi this went well');
+                                }
+                            },
+                            error: function(data){
+                                alert('Hubo errores iniciando sesion');
+                            }
+                        });
+                        });
+                    });
+                </script>
             </div>
 
             
