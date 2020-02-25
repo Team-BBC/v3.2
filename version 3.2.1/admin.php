@@ -125,9 +125,7 @@ session_start();
                             data:  {search:search},
                             success: function(data){    //returns 1 if the login was correct.
                                 alert(data);
-                                if($.trim(data) === "1"){
-                                    alert('hi this went well');
-                                }
+                                
                             },
                             error: function(data){
                                 alert('Hubo errores iniciando sesion');

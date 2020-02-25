@@ -38,13 +38,31 @@
                 </form>
                
             </div>
+            
+            <div class="col-sm-12 mt-2">
+                <table class="table table-dark">
+                    <thead class="font-weight-bold">
+                        <td>Sustancia</td>
+                        <td>Descarga</td>
+                        <td>Ultima actualizacion</td>
+                    </thead>
+                    <tbody>
+                        <td></td>
+                        <td>
+                            <span class="btn btn-primary btn-sm">
+                                <i class="fas fa-trash-alt">Descargar</i>
+                            </span>
+                        </td>
+                        <td></td>
+                    </tbody>
+                </table>
+            </div>
             <script src="http://code.jquery.com/jquery-3.3.1.min.js"
                     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                     crossorigin="anonymous">
                 </script>
                 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
                 <script>
-
                     $(function(){
                         //this runs a function if login button is clicked
                         $('#busqueda').click(function(e){
@@ -59,12 +77,12 @@
                         $.ajax({
                             type: 'POST',
                             url: 'busqueda.php',
-                            //send the user and password to jslogin.php
+                            //sends the user and password to busqueda.php
                             data:  {search:search},
                             success: function(data){    //returns 1 if the login was correct.
                                 alert(data);
-                                if($.trim(data) === "1"){
-                                    alert('hi this went well');
+                                if($.trim(data) != null){
+                                    
                                 }
                             },
                             error: function(data){
@@ -75,46 +93,14 @@
                     });
                 </script>
 
+            <?php
+
+            ?>
+
             <!--Ultimas Consultas-->
             
-            <ul class="list-group list-group mx-5 mt-5 mb-5">
-                
-                <li class="list-group-item ">Sustancia 1
-                    <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
-                        <label class="btn btn-light btn-sm">
-                        <a href="pythonpygameandraspberrypigamedevelopment_2e.pdf"download><input type="radio"  name="options" id="option1" checked> Descargar PDF
-                        </label></a>
-                    </div>
-                </li>
-                <li class="list-group-item">Sustancia 2
-                    <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
-                        <label class="btn btn-light btn-sm">
-                        <input type="radio" name="options" id="option1" checked> Descargar PDF
-                        </label>
-                    </div>
-                </li>
-                <li class="list-group-item">Sustancia 3
-                    <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
-                        <label class="btn btn-light btn-sm">
-                        <input type="radio" name="options" id="option1" checked> Descargar PDF
-                        </label>
-                    </div>
-                </li>
-                <li class="list-group-item">Sustancia 4
-                    <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
-                        <label class="btn btn-light btn-sm">
-                        <input type="radio" name="options" id="option1" checked> Descargar PDF
-                        </label>
-                    </div>
-                </li>
-                <li class="list-group-item">Sustancia 5
-                    <div class="btn-group btn-group-toggle ml-5" data-toggle="buttons">
-                        <label class="btn btn-light btn-sm">
-                        <input type="radio" name="options" id="option1" checked> Descargar PDF
-                        </label>
-                    </div>
-                </li>
-            </ul>
+
+            
         </div>   <!--Termina Contenido-->
 
 
