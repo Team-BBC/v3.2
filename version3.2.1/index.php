@@ -45,7 +45,7 @@
             </div>
 
         <div class="col-sm-12 mt-2">
-            <table class="table table-dark">
+            <table class="table table-dark" style="text-align: center">
                 <thead class="font-weight-bold">
                     <td>Sustancia</td>
                     <td>Descarga</td>
